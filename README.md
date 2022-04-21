@@ -11,7 +11,7 @@
   5. `cd server`
   6.  Inštalácia serveru (v priečinku 'server') `composer install`
   7.  Spustenie serveru (v priečinku 'server') `php -S 0.0.0.0:8000 -t .`
-  8.  DB hostovaná freena AWS cloud
+  8.  DB hostovaná free na AWS cloud
 
 
 
