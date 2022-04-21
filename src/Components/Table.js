@@ -54,14 +54,14 @@ function Table({ columns, data ,handleSave}) {
                       )
                     })}
                     
-                    <button onClick={()=>handleSave(row.original)}>Save</button>
+                    <button onClick={()=>handleSave(row.original)}>Uložiť</button>
                   </tr>
                 )}
             )}
           </tbody>
         </table>
         <br />
-        <div>Showing the first 50 results of {rows.length} rows</div>
+        <div>Zobrazujem prvých 50 riadkov z {rows.length} </div>
       </>
     )
 }

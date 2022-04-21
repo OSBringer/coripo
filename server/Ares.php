@@ -13,11 +13,8 @@ class Ares {
         return $this->dp->get($cin,$name);
     }
 	
-	function post($requestData)
+	function post($cin=0,$name="Asseco",$address)
     {
-        return $this->dp->post($requestData);
+        return $this->dp->post($cin,$name,$address);
     }
-	// function hi($to) {
-	// 	return  "Hi $to!";
-	// }
 }

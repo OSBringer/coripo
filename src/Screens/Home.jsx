@@ -33,7 +33,6 @@ function Home() {
             params:params
           })
           .then(result => {
-              console.log(result.data)
               setCompaniesArray(result.data)
           })
           .catch(error => console.log(error));
@@ -78,7 +77,7 @@ function Home() {
         []
       )
     return (
-        <div>Hello i am home
+        <div>
 
             <form  action="/action_page.php">
             <label>IČO</label>
@@ -90,7 +89,7 @@ function Home() {
                 placeholder="IČO" 
                 pattern="[0-9]*"
                 onKeyPress={(event) => {
-                    if (!/[0-9]/.test(event.key)) {
+                    if (!/[^-]*[0-9]/.test(event.key)) {
                       event.preventDefault();
                       setShowError(true)
                     }
@@ -106,14 +105,14 @@ function Home() {
                 type="text"
                 id="lname" 
                 name="lastname" 
-                placeholder="Company Name"
+                placeholder="Meno firmy"
                 onChange={(e) =>
                     setInputName((v) => (e.target.validity.valid ? e.target.value : v))
                 }
             />
             <input
                 type="submit"
-                value="Submit"
+                value="Hladať"
                 onClick={e => handleFormSubmit(e)}
             />
             </form>

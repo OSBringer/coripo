@@ -48,7 +48,7 @@ class MySQLDataProvider
                 }
                 //create register of company in db
                 foreach($array as $obj){
-                   // $this->put($obj["ico"],$obj["ojm"], $obj["jmn"] );
+                    $this->post($obj["ico"],$obj["ojm"], $obj["jmn"] );
                     $tmp['cin']=$obj["ico"];
                     $tmp['name']=$obj["ojm"];
                     $tmp['address']=$obj["jmn"];
@@ -60,13 +60,11 @@ class MySQLDataProvider
             throw new RestException(501, 'MySQL: ' . $e->getMessage());
         }
     }
-    function post($requestData){
+    function post($cin,$name,$address){
         $this->db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-        return($requestData);
         try {
             $sql = "INSERT INTO `companies` (`cin`, `name`, `address`) VALUES ('{$cin}', '{$name}', '{$address}')";
             $result = $this->db->query($sql)->fetch();
-
             return $result;
         } catch (PDOException $e) {
             throw new RestException(501, 'MySQL: ' . $e->getMessage());
