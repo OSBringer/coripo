@@ -1,0 +1,6 @@
+{
+    "name": "coripo/server",
+    "require": {
+        "restler/framework": "^5"
+    }
+}
