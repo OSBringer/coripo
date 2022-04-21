@@ -1,3 +1,20 @@
+# Navod na inštaláciu
+
+## Potrebné mať nainštalované
+  1. Node https://nodejs.org/en/download/
+  2. Composer https://getcomposer.org/download/
+## Návod na spustenie
+  1. do priečinku `git clone https://github.com/OSBringer/coripo.git`
+  2. `cd coripo`
+  3. Inštalácia klienta(v priečinku 'coripo') `npm install`
+  4. Spustenie klienta `npm start`
+  5. `cd server`
+  6.  Inštalácia serveru (v priečinku 'server') `composer install`
+  7.  Spustenie serveru (v priečinku 'server') `php -S 0.0.0.0:8000 -t .`
+  8.  DB hostovaná freena AWS cloud
+
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
