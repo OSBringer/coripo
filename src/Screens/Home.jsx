@@ -42,18 +42,12 @@ function Home() {
         const headers = {
             'Content-Type': 'application/json',
         }
-        axios({
-            method: 'post',
-            url: `http://localhost:8000/Ares/post`,
-            data: {
-              cin:5,
-              name:"ex",
-              address:"as"
-            }
-          })
+        axios.post('http://localhost:8000/Ares/',data)
           .then(result => {
               console.log(result)
-              setCompaniesArray(result.data)
+              if(result.status === 200){
+                alert("Data uložené");
+              }
           })
           .catch(error => console.log(error));
     }

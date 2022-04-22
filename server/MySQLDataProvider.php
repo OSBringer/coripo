@@ -48,7 +48,7 @@ class MySQLDataProvider
                 }
                 //create register of company in db
                 foreach($array as $obj){
-                    $this->post($obj["ico"],$obj["ojm"], $obj["jmn"] );
+                    //$this->post($obj["ico"],$obj["ojm"], $obj["jmn"] );
                     $tmp['cin']=$obj["ico"];
                     $tmp['name']=$obj["ojm"];
                     $tmp['address']=$obj["jmn"];
@@ -61,6 +61,7 @@ class MySQLDataProvider
         }
     }
     function post($cin,$name,$address){
+        
         $this->db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
         try {
             $sql = "INSERT INTO `companies` (`cin`, `name`, `address`) VALUES ('{$cin}', '{$name}', '{$address}')";

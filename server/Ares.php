@@ -13,7 +13,7 @@ class Ares {
         return $this->dp->get($cin,$name);
     }
 	
-	function post($cin=0,$name="Asseco",$address)
+	function post($cin=0,$name="Asseco",$address="")
     {
         return $this->dp->post($cin,$name,$address);
     }

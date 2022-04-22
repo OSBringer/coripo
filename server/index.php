@@ -6,6 +6,7 @@
     require_once './restler.php';
     use Luracast\Restler\Restler;
     $r = new Restler();
+    $r->setSupportedFormats('JsonFormat','UploadFormat');
     $r->addAPIClass('Ares');
     $r->handle();
 
